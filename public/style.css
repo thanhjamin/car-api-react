@@ -288,9 +288,9 @@ select {
  */
 
 button,
-html input[type="button"], /* 1 */
-input[type="reset"],
-input[type="submit"] {
+html input[type='button'],
+/* 1 */ input[type='reset'],
+input[type='submit'] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
 }
@@ -331,8 +331,8 @@ input {
  * 2. Remove excess padding in IE 8/9/10.
  */
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
@@ -343,8 +343,8 @@ input[type="radio"] {
  * decrement button to change from `default` to `text`.
  */
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -353,7 +353,7 @@ input[type="number"]::-webkit-outer-spin-button {
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
 
-input[type="search"] {
+input[type='search'] {
   -webkit-appearance: textfield; /* 1 */
   box-sizing: content-box; /* 2 */
 }
@@ -364,8 +364,8 @@ input[type="search"] {
  * padding (and `textfield` appearance).
  */
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -428,7 +428,7 @@ th {
 */
 
 * {
-  box-sizing: border-box;;
+  box-sizing: border-box;
 }
 
 html {
@@ -439,9 +439,6 @@ html {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(/public/img/3.jpg);
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -454,21 +451,22 @@ html {
 }
 
 .landing {
-  background-color: rgba(220, 220, 220, .7);
+  background-color: rgba(220, 220, 220, 0.7);
   padding: 15px 30px;
   border-radius: 5px;
 }
 
 .landing > h1 {
-  color: #B10DC9;
-  font-family: Skia;
+  color: #f20902;
   font-weight: normal;
 }
 
-.landing > input, .landing > form > input {
-  width: 100%;
+.landing > input,
+.landing > form > input {
+  width: 70%;
   padding: 10px;
   border-radius: 4px;
+  margin-right: 15px;
 }
 
 .landing > form {
@@ -478,8 +476,8 @@ html {
 
 .landing > a {
   margin-top: 15px;
-  padding: 10px 40px;
-  background-color: #333;
+  padding: 12px 40px;
+  background-color: #f20902;
   color: #fafafa;
   border-color: transparent;
   display: inline-block;
@@ -487,136 +485,72 @@ html {
   border-radius: 4px;
 }
 
-.landing > a:hover, .landing > a:focus {
-  background-color: #666;
+.landing > #view-all {
+  color: black;
+  background: transparent;
+  text-decoration: underline;
+}
+
+.landing > a:hover,
+.landing > a:focus {
+  background-color: #ad0500;
 }
 
 .landing > a:active {
-  background-color: #fafafa;
-  color: #333;
+  background-color: #ad0500;
+  color: #fafafa;
   border-color: #333;
 }
 
-.details, .search {
+.details,
+.search {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
+  top: 25px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   overflow-y: scroll;
-  background-color: rgba(220, 220, 220, .8);
+  background-color: rgba(220, 220, 220, 0.8);
   padding: 15px 30px;
   border-radius: 5px;
   min-width: 1400px;
 }
 
-.search > div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-pre {
-  text-align: left;
-}
-
-// .search > div > a {
-//   width: 30%;
-//   height: 0;
-//   padding-bottom: 19.8%;
-//   overflow: hidden;
-//   margin-bottom: 3%;
-//   border: 2px solid #333;
-//   border-radius: 4px;
-//   color: #333;
-//   text-decoration: none;
-// }
-
-// .search > div > a {
-//   width: 100%;
-//   padding-bottom: 70%;
-//   height: 0;
-//   overflow: inherit;
-//   margin-bottom: inherit;;
-//   border: none;
-//   border-radius: inherit;
-// }
-
-// .show-card {
-//   float: left;
-//   margin-right: 2%;
-//   border: 2px solid #333;
-//   border-radius: 4px;
-//   text-align: left;
-//   width: 32%;
-//   height: 0;
-//   padding-bottom: 19.8%;
-//   overflow: hidden;
-//   margin-bottom: 2%;
-// }
-
-// .show-card:nth-child(3n), .search > div > a:nth-child(3n) > .show-card {
-//   margin-right: 0;
-// }
-
-// .show-card > img {
-//   width: 46%;
-//   float: left;
-// }
-
-// .show-card > div{
-//   display: block;
-//   float: right;
-//   width: 52%;
-//   overflow-y: scroll;
-// }
-
-// .show-card > div > h3 {
-//   margin-top: 0;
-//   margin-bottom: 5px;
-// }
-
-// .show-card > div > h4 {
-//   margin-top: 0;
-//   margin-bottom: 5px;
-//   color: #666;
-//   font-size: 13px;
-// }
-
-// .show-card > div > p {
-//   margin: 0;
-//   font-size: 13px;
-}
-
 .search > header + div {
-  margin-top: 25px;
+  margin-top: 50px;
 }
 
 header {
   z-index: 10;
   position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   text-align: center;
   top: 0;
   left: 0;
   width: 100%;
-  overflow: hidden;
-  background-color: #fafafa;
+  background-color: #ffffff;
   padding: 8px 30px;
+  -moz-box-shadow: 0 0px 10px -3px #666;
+  -webkit-box-shadow: 0 0px 10px -3px #666;
+  box-shadow: 0 0px 10px -3px #666;
+}
+
+.back-link {
+  left: 0;
+  position: absolute;
+  top: 0;
+  padding: 12px 30px;
 }
 
 header > h1 {
-  font-family: Skia;
   font-weight: normal;
-  color: #B10DC9;
-  margin: 0;
+  color: #f20902;
+  margin: auto;
+  width: 300px;
+  display: inline-block;
 }
 
 header > h1 > a {
-  color: #B10DC9;
+  color: #f20902;
   text-decoration: none;
 }
 
@@ -637,14 +571,6 @@ header > h2 > a {
   position: relative;
 }
 
-.details > div > iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 header > input {
   min-width: 250px;
   max-width: 350px;
@@ -654,7 +580,8 @@ header > input {
   border-radius: 4px;
 }
 
-.details > section > img, .details > section > h3 {
+.details > section > img,
+.details > section > h3 {
   width: 8%;
 }
 
@@ -665,16 +592,28 @@ header > input {
 }
 
 @-moz-keyframes spin {
-    from { -moz-transform: rotate(0deg); }
-    to { -moz-transform: rotate(360deg); }
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
 }
 @-webkit-keyframes spin {
-    from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); }
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 @keyframes spin {
-    from {transform:rotate(0deg);}
-    to {transform:rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .details > section > * {
@@ -690,4 +629,104 @@ header > input {
 
 .details > header + section {
   margin-top: 25px;
+}
+
+.vehicle-img {
+  float: left;
+  width: 315px;
+  height: 100%;
+}
+
+.vehicle-details {
+  float: left;
+  margin-left: 20px;
+}
+
+.vehicle-price {
+  float: right;
+  padding-right: 20px;
+}
+
+.container {
+  width: 1170px;
+  margin: auto;
+}
+
+.vehicle-list {
+  width: 66.66667%;
+  float: left;
+  text-align: start;
+}
+
+.vehicle-filter {
+  width: 33.333%;
+  float: left;
+  -moz-box-shadow: 0 2px 11px -3px #666;
+  -webkit-box-shadow: 0 2px 11px -3px #666;
+  box-shadow: 0 2px 11px -3px #666;
+  background-color: #fff;
+  padding: 25px;
+  margin-bottom: 6px;
+  font-size: 16px;
+  position: relative;
+  color: #333;
+  text-align: start;
+}
+
+.vehicle-filter input {
+  width: 150px;
+  display: block;
+  background-color: white;
+  cursor: text;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  font-weight: 400;
+  -webkit-appearance: none;
+  float: left;
+  margin-right: 5px;
+}
+
+#vehicle-details-page {
+  margin: 50px auto auto auto;
+  width: 640px;
+}
+
+#vehicle-details-page section {
+  color: black;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -moz-box-shadow: 0 2px 5px 0 #bcbdbe;
+  -webkit-box-shadow: 0 2px 5px 0 #bcbdbe;
+  box-shadow: 0 2px 5px 0 #bcbdbe;
+  display: table;
+  position: relative;
+  width: 100%;
+  margin-bottom: 5px;
+  background-color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.overview-info,
+#info-section,
+#seller-info-section {
+  padding-left: 20px;
+  text-align: start;
+}
+
+.details-section h3 {
+  text-align: center;
+}
+
+.vehicle-filter button {
+  margin-top: 15px;
+  padding: 12px 40px;
+  background-color: #f20902;
+  color: #fafafa;
+  border-color: transparent;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+  width: 90%;
 }
